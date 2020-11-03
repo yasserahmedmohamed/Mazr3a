@@ -1,7 +1,7 @@
 package com.yasser.mazr3a_task.model
 
 data class Order(
-    val billingPerson: BillingPerson,
+    val billingPerson: BillingPerson?,
     val couponDiscount: Int,
     val createDate: String,
     val createTimestamp: Int,

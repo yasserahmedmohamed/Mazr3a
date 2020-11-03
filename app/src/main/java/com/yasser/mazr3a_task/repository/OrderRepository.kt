@@ -8,6 +8,7 @@ import com.yasser.mazr3a_task.data.db.AppDatabase
 import com.yasser.mazr3a_task.data.network.SafeApiRequest
 import com.yasser.mazr3a_task.data.network.ServiceApi
 import com.yasser.mazr3a_task.model.ItemCartData
+import com.yasser.mazr3a_task.model.Order
 import com.yasser.mazr3a_task.model.User
 
 class OrderRepository(private val serviceApi: ServiceApi, private val db: AppDatabase) :
@@ -51,6 +52,12 @@ class OrderRepository(private val serviceApi: ServiceApi, private val db: AppDat
         val response = apiRequest{ serviceApi.MakeOrder(objectData)}
 
         return true
+    }
+
+
+   suspend fun GetUserOrder(email:String):List<Order>{
+        val response = apiRequest{ serviceApi.GetUSerOrders(email)}
+       return response.items
     }
 
 }

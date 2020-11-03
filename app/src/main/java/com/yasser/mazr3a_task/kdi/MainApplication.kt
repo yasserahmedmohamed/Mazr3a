@@ -40,6 +40,7 @@ class MainApplication : Application(), KodeinAware {
         bind() from singleton { ProductDetailsViewModelFactory(instance(),instance()) }
         bind() from singleton { CartViewModelFactory(instance()) }
         bind() from singleton { HomeViewModelFactory(instance(),instance(),instance(),instance()) }
+        bind() from singleton { OrderViewModelFactory(instance(),instance()) }
 
 
     }

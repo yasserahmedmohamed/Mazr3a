@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.yasser.mazr3a_task.R
 import com.yasser.mazr3a_task.repository.UserRepository
 import com.yasser.mazr3a_task.ui.login.LoginActivity
+import com.yasser.mazr3a_task.ui.orders.OrderActivity
 import kotlinx.android.synthetic.main.fragment_user.*
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
@@ -38,6 +39,11 @@ class UserFragment : Fragment(), KodeinAware {
                 it.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 it.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                startActivity(it)
+            }
+        }
+        orderLayout.setOnClickListener {
+            Intent(requireContext(), OrderActivity::class.java).also {
                 startActivity(it)
             }
         }

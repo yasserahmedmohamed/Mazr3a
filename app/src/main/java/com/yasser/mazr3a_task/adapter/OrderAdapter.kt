@@ -4,20 +4,24 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.core.content.ContextCompat
+import android.widget.*
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.yasser.mazr3a_task.R
 import com.yasser.mazr3a_task.model.Order
+import com.yasser.mazr3a_task.utils.HideWithAnimation
 import com.yasser.mazr3a_task.utils.LoadImage
 import com.yasser.mazr3a_task.utils.showWithAnimation
 
-class OrderIAdapter(val context: Context) :
-    RecyclerView.Adapter<OrderIAdapter.OrderItemViewHolder>() {
-    val orders = ArrayList<Order>()
+class OrderAdapter(val context: Context) :
+    RecyclerView.Adapter<OrderAdapter.OrderItemViewHolder>() {
+    private val orders = ArrayList<Order>()
+
+    fun UpdateOrders(items: List<Order>) {
+        orders.clear()
+        orders.addAll(items)
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
@@ -37,12 +41,13 @@ class OrderIAdapter(val context: Context) :
         val order = orders.get(position)
         holder.onBind(context, order)
         holder.order_number_layout.setOnClickListener {
-//            holder.arrowBtn.background =  ContextCompat.getDrawable(
-//                context,
-//                R.drawable.layout_white_background
-//            )
-            holder.arrowBtn.rotation = 90F
-            holder.subToalLayout.showWithAnimation()
+            if (holder.subToalLayout.visibility == View.VISIBLE) {
+                holder.arrowBtn.rotation = 0F
+                holder.subToalLayout.HideWithAnimation()
+            } else {
+                holder.arrowBtn.rotation = 180F
+                holder.subToalLayout.showWithAnimation()
+            }
         }
     }
 
@@ -58,7 +63,7 @@ class OrderIAdapter(val context: Context) :
         var items_layout: LinearLayout
         var subToalLayout: LinearLayout
         var order_number_layout: LinearLayout
-        var arrowBtn: Button
+        var arrowBtn: ImageButton
 
 
         init {
@@ -81,7 +86,13 @@ class OrderIAdapter(val context: Context) :
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
             order_number.text = "${mOrder.id}#"
-            OrderAddress.text = mOrder.billingPerson.street
+            if (!mOrder.billingPerson?.street.isNullOrEmpty())
+            {
+                OrderAddress.text = mOrder.billingPerson?.street
+            }
+            else{
+                OrderAddress.text = "--"
+            }
             OrderPaymentWay.text = mOrder.paymentMethod
             OrderTime.text = mOrder.createDate
             order_deliver_cost.text = (mOrder.total - mOrder.subtotal).toString()

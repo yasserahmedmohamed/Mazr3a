@@ -5,5 +5,5 @@ data class BillingPerson(
     val lastName: String,
     val name: String,
     val phone: String,
-    val street: String
+    val street: String?
 )

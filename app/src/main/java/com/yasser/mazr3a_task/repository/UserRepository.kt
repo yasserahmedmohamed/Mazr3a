@@ -11,6 +11,7 @@ class UserRepository(private val serviceApi: ServiceApi,
                      private val mPrefrence: PreferenceProvider, private val db: AppDatabase) : SafeApiRequest() {
 
     fun GetUserLogged() = db.getUserDao().GetUser()
+    suspend fun GetUserData() = db.getUserDao().GetUserData()
 
     suspend fun UpdateUserData(user: User){
         db.getUserDao().DeleteAllData()

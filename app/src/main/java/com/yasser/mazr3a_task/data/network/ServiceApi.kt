@@ -2,6 +2,7 @@ package com.yasser.mazr3a_task.data.network
 
 import com.google.gson.JsonObject
 import com.yasser.mazr3a_task.data.network.responses.CategoryResponse
+import com.yasser.mazr3a_task.data.network.responses.OrderResponse
 import com.yasser.mazr3a_task.data.network.responses.ProductResponse
 import okhttp3.OkHttpClient
 import retrofit2.Response
@@ -56,4 +57,11 @@ interface ServiceApi {
 
     @POST("${StoreID}/orders?token=${secretToken}")
     suspend fun MakeOrder(@Body data: JsonObject):Response<Any>
+
+
+
+    @GET("${StoreID}/orders?token=${secretToken}")
+    suspend fun GetUSerOrders(
+        @Query("customer") userEmail: String
+    ): Response<OrderResponse>
 }
