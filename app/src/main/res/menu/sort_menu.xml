@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/filter_1"
+        android:title="نحن ننصح ب" />
+
+    <item
+        android:id="@+id/filter_2"
+        android:title="المنتجات الجديده" />
+
+    <item
+        android:id="@+id/filter_3"
+        android:title="السعر:الاقل الي الاعلي" />
+    <item
+        android:id="@+id/filter_4"
+        android:title="السعر:الاعلي الي الاقل"/>
+    <item
+        android:id="@+id/filter_5"
+        android:title="الاسم:من الالف الي الياء"/>
+    <item
+        android:id="@+id/filter_6"
+        android:title="الاسم:من الياء الي الالف" />
+</menu>

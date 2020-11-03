@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "741841946928",
+    "firebase_url": "https://mazr3atask.firebaseio.com",
+    "project_id": "mazr3atask",
+    "storage_bucket": "mazr3atask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741841946928:android:2e4d146115d2420f39e0f5",
+        "android_client_info": {
+          "package_name": "com.yasser.mazr3a_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741841946928-l0sq9k81hj2lb9sc9gsrfcnm1r1n53it.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yasser.mazr3a_task",
+            "certificate_hash": "3cd2321ea45495acac297f04039c1f2c2994f2df"
+          }
+        },
+        {
+          "client_id": "741841946928-1k51oonkogbasdqm8b7gue1n934p9ct7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn7pLKMnGUrnTTNIFK845Kqx5E8uU9A_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741841946928-1k51oonkogbasdqm8b7gue1n934p9ct7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

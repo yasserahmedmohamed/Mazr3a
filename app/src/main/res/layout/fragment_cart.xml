@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    tools:context=".ui.home.cartfragment.CartFragment">
+
+    <LinearLayout
+        android:id="@+id/ActionLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_cart"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray" />
+
+    </LinearLayout>
+
+   <RelativeLayout
+       android:layout_below="@+id/ActionLayout"
+       android:id="@+id/mainContainerLayout"
+       android:layout_width="match_parent"
+       android:visibility="gone"
+       android:layout_height="match_parent">
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/cartItemRecycle"
+           android:layout_above="@+id/totla_layout"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="10dp"
+           tools:listitem="@layout/item_cart_data" />
+
+       <LinearLayout
+           android:layout_alignParentBottom="true"
+           android:id="@+id/totla_layout"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="10dp"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:textSize="18sp"
+                   android:gravity="center"
+                   android:textColor="@color/black"
+                   android:layout_gravity="center"
+                   android:layout_height="wrap_content"
+                   android:text="@string/sub_total" />
+
+               <TextView
+                   android:id="@+id/subTotalCost"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:textColor="@color/black"
+                   android:layout_height="wrap_content"
+                   android:text="EGP 30" />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginBottom="10dp"
+
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:textSize="18sp"
+                   android:gravity="center"
+                   android:textColor="@color/black"
+                   android:layout_gravity="center"
+                   android:layout_height="wrap_content"
+                   android:text="@string/shipping_expenses" />
+
+               <TextView
+                   android:id="@+id/shippingCost"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:textColor="@color/black"
+                   android:layout_height="wrap_content"
+                   android:text="EGP 30" />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:textSize="22sp"
+                   android:textStyle="bold"
+                   android:gravity="center"
+                   android:textColor="@color/black"
+                   android:layout_gravity="center"
+                   android:layout_height="wrap_content"
+                   android:text="@string/total_cost" />
+
+               <TextView
+                   android:id="@+id/totalCost"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:textSize="22sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/black"
+                   android:layout_height="wrap_content"
+                   android:text="EGP 30" />
+           </LinearLayout>
+           <Button
+               android:id="@+id/ContinueBtn"
+               android:layout_width="match_parent"
+               android:layout_margin="10dp"
+               android:text="@string/continue_buy"
+               android:background="@color/darker_green"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noDataLayout"
+        android:visibility="gone"
+        android:layout_below="@+id/ActionLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="@string/no_data_in_cart"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>

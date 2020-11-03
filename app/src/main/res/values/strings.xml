@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Mazr3a_Task</string>
+    <string name="welcome">مرحبا , نحن سعداء لرؤيتك !</string>
+    <string name="enter_phone">ادخل هاتفك</string>
+    <string name="login">تسجيل الدخول</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="EGP">EGP</string>
+    <string name="add_to_cart">اضف الي السله</string>
+    <string name="count"> : الكميه</string>
+    <string name="sort_by">ترتيب ب</string>
+    <string name="title_cart">سله المشتريات</string>
+    <string name="sub_total">المجموع الفرعي</string>
+    <string name="continue_buy">استمر في الشراء</string>
+    <string name="shipping_expenses">مصاريف الشحن</string>
+    <string name="total_cost">الاجمالي</string>
+    <string name="deleteProduct">ازاله المنتج</string>
+    <string name="yes">نعم</string>
+    <string name="no">الغاء</string>
+    <string name="are_you_sure">هل انت متأكد؟</string>
+    <string name="enter_email">ادخل بريدك الالكتروني</string>
+    <string name="enter_name">ادخل اسمك</string>
+    <string name="choose_location">اختر موقعك</string>
+    <string name="home_location">البيت</string>
+    <string name="office_location">المكتب</string>
+    <string name="other_location">اخري</string>
+    <string name="order_alert_description">بمجرد ان يتم تقديم طلبك, سيتصل مدير التوصيل لدينا لترتيب التسليم</string>
+    <string name="order">الطلبات</string>
+    <string name="alert_in_order">: ملحوظه</string>
+    <string name="payment_type_1">الدفع عند الاستلام</string>
+    <string name="payment_type_2">الدفع عن طريق بطاقه الاتمان عند الاستلام</string>
+    <string name="this_field_require">من فضلك ادخل البيانات</string>
+    <string name="enter_valid_email">البريد الالكتروني غير صحيح</string>
+    <string name="no_data_in_cart">لا توجد عناصر</string>
+    <string name="enter_valid_phone">ادخل رقم صحيح</string>
+    <string name="verfiy_Message">سوف تصل اليك رساله التأكيد قريبا</string>
+</resources>

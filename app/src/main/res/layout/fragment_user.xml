@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.userfragment.UserFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background">
+
+        <ImageButton
+            android:id="@+id/settingBtn"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_settings" />
+
+        <LinearLayout
+            android:id="@+id/m1"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/settingBtn"
+
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_app" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Yasser Ahmed"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/m2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/m1"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/paytxt"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_payment" />
+
+                <TextView
+                    android:id="@+id/paytxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="دفع" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/infoTxt"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_info" />
+
+                <TextView
+                    android:id="@+id/infoTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="معلومات" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/orderTxt"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_order" />
+
+                <TextView
+                    android:id="@+id/orderTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="الطلبات" />
+            </RelativeLayout>
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_below="@+id/m2"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/m1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/white_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/location"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text=" العنوان" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/discount"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_discount" />
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="الخصومات" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/support"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_tech_support" />
+
+            <TextView
+                android:id="@+id/support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                android:text="الدعم الفني" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/m1"
+        android:background="@drawable/white_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/share"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_share" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                android:text="المشاركه" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/abutUs"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_about_us" />
+
+            <TextView
+                android:id="@+id/abutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                android:text="من نحن" />
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/logutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/logout"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_logout" />
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                android:text="خروج" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
